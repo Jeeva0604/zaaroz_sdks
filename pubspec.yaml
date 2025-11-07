@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^2.2.2
   iconify_flutter: ^0.0.7
 
 dev_dependencies:

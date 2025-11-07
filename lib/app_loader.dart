@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:zaaroz_sdk/constant/app_icons.dart';
 
 class AppLoader extends StatelessWidget {
@@ -9,6 +9,11 @@ class AppLoader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Iconify(AppIcons.appLoaderSvg, size: size, color: color);
+    return SvgPicture.string(
+      AppIcons.appLoaderSvg,
+      width: size,
+      height: size,
+      colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
+    );
   }
 }
